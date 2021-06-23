@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      throwExceptions="true"
+      internalLogToConsole="true"
+>
+
+    <targets>
+
+        <target name="file" xsi:type="File"
+            layout="${longdate} [${level}] ${logger} (t${threadid}#${mdc:item=CorrelationId}) - ${message}" 
+            fileName="${gdc:item=LogDir}\Chib.Rpc4Rdp.cash.admin.log" 
+            keepFileOpen="false"
+            encoding="windows-1251" 
+            deleteOldFileOnStartup="true"
+            />
+
+	<target name="debugger" xsi:type="Debugger" layout="[${counter}] ${logger} ${message}"/>
+
+    </targets>
+
+    <rules>
+        <logger name="*" minlevel="Trace" writeTo="file" />
+    </rules>
+</nlog>

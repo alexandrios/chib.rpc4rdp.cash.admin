@@ -1,0 +1,8 @@
+﻿<R4RConfiguration>
+	<InstanceName>ADMIN</InstanceName>
+
+	<Domains>
+		<Domain Name="chib.admin">
+		</Domain>
+	</Domains>
+</R4RConfiguration>
