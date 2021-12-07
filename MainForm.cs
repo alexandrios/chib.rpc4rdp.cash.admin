@@ -16,6 +16,21 @@ namespace chib.rpc4rdp.cash.admin
         private static R4R.Instance r4rInst;
         private long sumValue = 0;
 
+        private String SummaValue
+        {
+            get {
+                String s = sumValue.ToString();
+                if (s.Length == 1)
+                    s = "0.0" + s;
+                else if (s.Length == 2)
+                    s = "0." + s;
+                else
+                    s = s.Substring(0, s.Length - 2) + "." + s.Substring(s.Length - 2);
+
+                return s;
+            }
+        }
+
         public MainForm()
         {
             InitializeComponent();
@@ -148,7 +163,8 @@ namespace chib.rpc4rdp.cash.admin
                     _logger.Trace("r4rInst != null");
                     IR4RAgent r4rAgent = r4rInst.Domains[Program.RDP_DOMAIN].GetAgent(Program.RDP_AGENT);
 
-                    (r4rAgent as R4RAgent).MoneyOut(sumValue.ToString());
+                    //(r4rAgent as R4RAgent).MoneyOut(sumValue.ToString()); -для старой chib.cash.wtp.dll
+                    (r4rAgent as R4RAgent).MoneyOut(SummaValue);
                 }
                 else
                 {
@@ -167,7 +183,8 @@ namespace chib.rpc4rdp.cash.admin
                     _logger.Trace("r4rInst != null");
                     IR4RAgent r4rAgent = r4rInst.Domains[Program.RDP_DOMAIN].GetAgent(Program.RDP_AGENT);
 
-                    (r4rAgent as R4RAgent).MoneyIn(sumValue.ToString());
+                    //(r4rAgent as R4RAgent).MoneyIn(sumValue.ToString()); - для старой chib.cash.wtp.dll
+                    (r4rAgent as R4RAgent).MoneyIn(SummaValue);
                 }
                 else
                 {

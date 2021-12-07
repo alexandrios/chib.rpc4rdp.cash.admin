@@ -2,105 +2,171 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{427412A9-6E11-4985-BF24-97DA1744CE32}</ProjectGuid>
+    <ProjectGuid>{A9F5D561-C7F0-4BB0-9664-6E45F3516AB4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>chib.rpc4rdp.cash.admin</RootNamespace>
+    <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>chib.rpc4rdp.cash.admin</AssemblyName>
+    <RootNamespace>chib.rpc4rdp.cash.admin</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>.\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>.\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Chib.Rpc4Rdp.Api, Version=1.0.0.30265, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Chib.Rpc4Rdp.Api, Version=1.0.0.25424, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WinXP\x86\Client\Chib.Rpc4Rdp.Api.dll</HintPath>
+      <HintPath>lib86\Chib.Rpc4Rdp.Api.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=1.0.0.505, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WinXP\x86\Client\NLog.dll</HintPath>
+      <HintPath>lib86\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cash.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <Content Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\objects\01\1dc9a966b26c38e1a9bfe99bc03006299c68c4" />
+    <None Include=".git\objects\0f\d4b3bf07a51dac2041c250ea20ca1cf1c66819" />
+    <None Include=".git\objects\16\feb6f7939db26bc18fbff8ef7e35d3807241d3" />
+    <None Include=".git\objects\20\169d113683a8eacb9898fd893be9b34ac4da8b" />
+    <None Include=".git\objects\22\4c5a38750fcb2ecb95afce93cd75fc2c1d297a" />
+    <None Include=".git\objects\24\f627b2a030672293def9ab65ab07450350d047" />
+    <None Include=".git\objects\2a\912e274dfd9aa146d525f773b63103aff57682" />
+    <None Include=".git\objects\2d\8119ebf96d439525c4f6d87ce5fc18151f0188" />
+    <None Include=".git\objects\2d\92e266c3b598b6c90af483e5d091fb3f866058" />
+    <None Include=".git\objects\2d\e215dbb685b7f1ae007e205b50f3d9dfad012e" />
+    <None Include=".git\objects\35\58923d8084f28af3416d88c4ad48922a5eb61b" />
+    <None Include=".git\objects\41\585a429c3a00e6806db0a229d16970b5e7b6d7" />
+    <None Include=".git\objects\46\fca3eb57ccb4eccf07d263b37f392b7bd41054" />
+    <None Include=".git\objects\4b\825dc642cb6eb9a060e54bf8d69288fbee4904" />
+    <None Include=".git\objects\50\6f4254572bac2d8aaea9d63837be766b534de3" />
+    <None Include=".git\objects\55\9d82f6a70ff7569e14295d1e712fd808aae54b" />
+    <None Include=".git\objects\68\6d199394aac3a5ffaedc317347cc451b996dcd" />
+    <None Include=".git\objects\6d\0105870793404f068f388878378e212cfafae7" />
+    <None Include=".git\objects\74\87f2eeab10292f426f9cd5105113efc03f4ef0" />
+    <None Include=".git\objects\77\8fbf6483b3e3970e9bfd88b9bebc051f29d06d" />
+    <None Include=".git\objects\7d\44f966593c24162338328b2ea4a8b5bbc88a91" />
+    <None Include=".git\objects\85\3388953e6b5a7cce9cc6e0cdaaebd3268f6dd7" />
+    <None Include=".git\objects\9e\569dd70e0d22ae4beb35add4ef6fd58370ab9a" />
+    <None Include=".git\objects\9e\f249ae2d315a80032f4e173f9893ad0443b31a" />
+    <None Include=".git\objects\a3\4adf2b6c7cd61c110d109d815e955039fefbfa" />
+    <None Include=".git\objects\a6\97cec114360b103987012ac888ed97b32994ba" />
+    <None Include=".git\objects\a9\84c45915b3834bee3f45b45a1ac05fd2e4ad5c" />
+    <None Include=".git\objects\aa\9ffdc319804641751fac2e8e3c9ef884a29d23" />
+    <None Include=".git\objects\ad\573a030a273f8643b0d31ebaf5915648e8adb9" />
+    <None Include=".git\objects\b0\d6dc6c08f80319e70f3ed3c787f39d5dae68b1" />
+    <None Include=".git\objects\b7\c8f21879cdd68f8651a84c847fc4bec0ba5b21" />
+    <None Include=".git\objects\c6\6912de4f4e7bd2266b46af7e0d3e1044c744d4" />
+    <None Include=".git\objects\cc\876ae6a29b10664e3e7001300b2df3367f7d7e" />
+    <None Include=".git\objects\d1\9e5a2297733ce14841c051047dc0d27e527a10" />
+    <None Include=".git\objects\df\9b24ab9eaf1c078d7ad219d07d615d694e5b2a" />
+    <None Include=".git\objects\e4\77419f43315cd58ab67ccaab0438f69d1107a8" />
+    <None Include=".git\objects\e6\9de29bb2d1d6434b8b29ae775ad8c2e48c5391" />
+    <None Include=".git\objects\eb\5d569a1b730e13bf9cacee1f49b455b68dcb45" />
+    <None Include=".git\objects\f9\72168e588a4b9f17966bc92be34f25c3f76704" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\smartgit.config" />
+    <None Include=".git\smartgit\logcache\nodes.uuid" />
+    <None Include=".git\smartgit\logcache\nodes2" />
+    <None Include=".svn\entries" />
+    <None Include=".svn\format" />
+    <None Include=".svn\pristine\0c\0c89469db3db56b54f7c07ae4b483befdb5406db.svn-base" />
+    <None Include=".svn\pristine\46\46f27c92955abfe92aaff4739c4d5932d35aa946.svn-base" />
+    <None Include=".svn\pristine\47\47b15748ecc8e952c5935170090db7c269ce4b4f.svn-base" />
+    <None Include=".svn\pristine\50\507ec4bf1a8fec38e82c47c4d59ef91d3112ab8a.svn-base" />
+    <None Include=".svn\pristine\5e\5e1d04de66ffcc5dfd813530ab6992e6daaae417.svn-base" />
+    <None Include=".svn\pristine\64\648481af5683041d312145d7308c634c71c18f7d.svn-base" />
+    <None Include=".svn\pristine\67\6795b0df5eb9703b123ebc5706437bcd670afebb.svn-base" />
+    <None Include=".svn\pristine\82\82eba764d22d716edab42d5ea78f72d2c46802f1.svn-base" />
+    <None Include=".svn\pristine\b2\b200133162658235ed972db1055f0e2f6d4ce6b2.svn-base" />
+    <None Include=".svn\pristine\b9\b9c62efb18efbe8881b796b4e967236dedba6e8d.svn-base" />
+    <None Include=".svn\pristine\d6\d604097639ed23095cb5aee05f88336b8181a0a0.svn-base" />
+    <None Include=".svn\pristine\ed\ed6ff3b19f65048446ec3b1bf25f5ef0e7d7e691.svn-base" />
+    <None Include=".svn\wc.db" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin64\v15\.suo" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin64\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin64\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin_32\v15\.suo" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin_32\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin_32\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin_32\v15\Server\sqlite3\storage.ide-shm" />
+    <None Include=".vs\chib.rpc4rdp.cash.admin_32\v15\Server\sqlite3\storage.ide-wal" />
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cash.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="R4RAgent.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".svn\tmp\" />
+    <Folder Include=".vs\chib.rpc4rdp.cash.admin\v15\Server\sqlite3\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
 </Project>

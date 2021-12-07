@@ -42,6 +42,7 @@ namespace chib.rpc4rdp.cash.admin
             client.InvokeMethod(String.Format("rpc://{0}/Wrapper/{1}", Program.RDP_DOMAIN, method), r4rParams, 20000);
         }
 
+        /*
         public void Print(String text,
             bool isFz54, bool isPreCheck, bool isCashlessCheck,
             bool isECheck, String clientPhone, String clientEmail,
@@ -71,6 +72,19 @@ namespace chib.rpc4rdp.cash.admin
             InvokeMethod("Print", r4rParams);
             _logger.Debug("end Print");
         }
+        */
+
+        public void PrintPars(String chequeTemplate, Dictionary<String, String> inputParams)
+        {
+            _logger.Debug("start PrintPars");
+            R4RParameters r4rParams = new R4RParameters();
+            r4rParams["text"] = chequeTemplate;
+            r4rParams["parameters"] = inputParams;
+
+            InvokeMethod("PrintPars", r4rParams);
+            _logger.Debug("end PrintPars");
+        }
+
 
         public void X_Report()
         {
